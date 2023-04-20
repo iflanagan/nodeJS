@@ -2,7 +2,7 @@
 // Ian Flanagan Devops Tricentis 2023
 
 let mysql = require('mysql');
-let config = require('./config.js');
+let config = require('./myConfig.js');
 let args = [];
 
 
@@ -51,8 +51,8 @@ if (args.length !== 3)  {
 
 let connection = mysql.createConnection({
 
-  host     : 'demo.c6joaom3qefu.us-east-2.rds.amazonaws.com',
-  port      : '3306',
+  host     : config.host ,
+  port      : config.port,
   user     : args[0],
   password : args[1],
   database : args[2]
