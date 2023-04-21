@@ -1,6 +1,6 @@
 let config = {
 
-  myAPIKey : 'PAK-xBgEeBGOLUaSI9-KS1/Gm+OS26Svc9+y2x2BC3syVImoDYMa9LxrsSzh+Q1hVop4Z/8VxOvz6UU+riKvK',
+  myAPIKey : '<testimAPIKey>',
   url : 'https://api.testim.io/',
   suitesURl  : 'suites/run',
   testbyID : 'tests/run/',
