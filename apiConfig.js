@@ -1,7 +1,8 @@
 let config = {
 
-  myAPIKey : '<testimAPIKey>',
+  myAPIKey : 'PAK-rn6RXMeE/32uER-KSFygrN0Yr1utlRK0tG69arSCabQtuRqmumTYq2Hb+vb9acpc2+RB2HbZQ8cOOmVoi',
   url : 'https://api.testim.io/',
+  branchesurl: 'https://api.testim.io/branches',
   suitesURl  : 'suites/run',
   testbyID : 'tests/run/',
   testPlanurl : 'test-plans/run/',
@@ -17,7 +18,7 @@ let config = {
   mySuiteID: 'yBDyWXOxwzbNkzRm',
   myTestID: 'Gntn7GdluocTtWyT',
   myTestPlanID: 'Z0Nmu5RJUAgk8pyO',
-  myLabelID: 'qTest'
+  myLabelID: 'slack'
 
 };
 

@@ -107,6 +107,8 @@ fetch(url, {
 
 function runByLabelID(myLabelID) {
 
+let url = `${config.runTestbyLabelID}/${myLabelID}`;
+
 const data = {
 
   "branch": config.branch,
@@ -189,7 +191,6 @@ fetch(url, {
 
 }
 
-
 function getTests (projectID) {
 
   let url = 'https://api.testim.io/tests';
@@ -213,12 +214,64 @@ function getTests (projectID) {
       console.log('tests old way print out');
 
       // https://app.testim.io/#/project/yUHggaUM53fuXM0PejOu/branch/master/test/ToPNnwbAIwm0xB1k
+    
       myTests.forEach(testID => console.log(`https://app.testim.io/#/project/${projectID}/branch/master/automate/test/${testID}`));
+    
  
   });
   
  };
 
-getTests('yUHggaUM53fuXM0PejOu');
+
+function getBranches () {
+
+  console.log('calling getBranches() method now....');
+  
+   let url = 'https://api.testim.io/branches';
+  
+   fetch(url, {method: 'GET', headers: {
+           'Accept': 'application/json',
+           'Authorization': `Bearer ${token}`
+       },
+       timeout: 5000
+   }).then(response => response.json())
+   
+   .then(function(data) {
+   
+       console.log('In Data portion of promise' +JSON.stringify(data));
+         
+      
+   
+    });
+    
+   };
+
+
+function testSearch(testName) {
+
+  console.log('calling testSearch() method now....');
+  
+   let url = 'https://api.testim.io/tests/search?name=${testName}';
+  
+   fetch(url, {method: 'GET', headers: {
+           'Accept': 'application/json',
+           'Authorization': `Bearer ${token}`
+       },
+       timeout: 5000
+   }).then(response => response.json())
+   
+   .then(function(data) {
+   
+       console.log('Test Search' +JSON.stringify(data));
+         
+   
+    });
+    
+   };
+
+//getTests('yUHggaUM53fuXM0PejOu');
 //runTestPlanID(config.myTestPlanID);
+//runByLabelID(config.myLabelID);
+//getBranches();
+testSearch('addition two numbers ');
 
