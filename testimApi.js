@@ -1,7 +1,7 @@
 
 /*
 
-Author: Ian Flanagan Tricentis Devops BU 2023
+Author: Ian Flanagan Tricentis  2023
 edit the apiConfig.js file to add your API token 
 and testID, suiteID, and testPlanID and or lablels
 */
@@ -248,6 +248,29 @@ function getBranches () {
 
 
 function testSearch(testName) {
+
+  console.log('calling testSearch() method now....');
+  
+   let url = 'https://api.testim.io/tests/search?name=${testName}';
+  
+   fetch(url, {method: 'GET', headers: {
+           'Accept': 'application/json',
+           'Authorization': `Bearer ${token}`
+       },
+       timeout: 5000
+   }).then(response => response.json())
+   
+   .then(function(data) {
+   
+       console.log('Test Search' +JSON.stringify(data));
+         
+   
+    });
+    
+   };
+
+
+function getRunsExecutions(testName) {
 
   console.log('calling testSearch() method now....');
   
