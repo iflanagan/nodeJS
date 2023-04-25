@@ -1,5 +1,11 @@
 "use strict";
 
+/*
+
+Author: Ian Flanagan Tricentis Devops 2023
+
+*/
+
 const crypto = require('crypto');
 const { argv } = require('process');
 
