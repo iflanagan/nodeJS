@@ -213,9 +213,9 @@ function getTests (projectID) {
 
       console.log('tests old way print out');
 
-      // https://app.testim.io/#/project/yUHggaUM53fuXM0PejOu/branch/master/test/ToPNnwbAIwm0xB1k
+      // https://app.testim.io/#/project/yUHggaUM53fuXM0PejOu/branch/master/test/CJnj0amO8qxeHyBH
     
-      myTests.forEach(testID => console.log(`https://app.testim.io/#/project/${projectID}/branch/master/automate/test/${testID}`));
+      myTests.forEach(testID => console.log(`https://app.testim.io/#/project/${projectID}/branch/master/test/${testID}`));
     
  
   });
@@ -292,9 +292,9 @@ function getRunsExecutions(testName) {
     
    };
 
-//getTests('yUHggaUM53fuXM0PejOu');
+getTests('yUHggaUM53fuXM0PejOu');
 //runTestPlanID(config.myTestPlanID);
 //runByLabelID(config.myLabelID);
 //getBranches();
-testSearch('addition two numbers ');
+//testSearch('addition two numbers ');
 
